@@ -104,6 +104,11 @@
                         <i class="fa-solid fa-gear w-5 text-center"></i> General & Settings
                     </button>
                 </li>
+                <li class="mt-4 border-t border-gray-800 pt-2">
+                    <button onclick="switchTab('retention-playbook')" class="nav-item w-full text-left px-6 py-3 text-red-400 hover:bg-gray-800 hover:text-red-300 flex items-center gap-3 font-medium">
+                        <i class="fa-solid fa-life-ring w-5 text-center"></i> Retention Playbook
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -119,16 +124,17 @@
                     <p class="text-gray-400 text-lg">A dynamic, motivating tool designed to fuel your fitness journey and serve as a personal cheerleader.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-colors">
                         <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-medal text-yellow-500"></i> Achievements (Trophy Case)
                         </h4>
-                        <p class="text-gray-300 mb-4">Engage and stay motivated with physical badges earned for completing challenges. Earn badges based on attendance, performance, and streaks.</p>
+                        <p class="text-gray-300 mb-4">Engage and stay motivated with physical badges earned for completing challenges, plans, and streaks.</p>
                         <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
-                            <li><strong>Post-Workout Flow:</strong> Animated celebration UI upon earning a badge.</li>
-                            <li><strong>Badge States:</strong> Empty (not attempted), Inactive (in progress), Active (awarded).</li>
-                            <li><strong>Details View:</strong> Tap a badge to see completion criteria, dates, and related workouts.</li>
+                            <li><strong>Categories:</strong> Organized by Attendance, Challenges, and Performance.</li>
+                            <li><strong>Celebrations:</strong> Animated post-workout UI, multiple badge intros, and replayable animations on tap.</li>
+                            <li><strong>Badge States:</strong> Empty (grayed out), Inactive (semi-filled), and Active (full color + glow).</li>
+                            <li><strong>Details & Timeline:</strong> Tap a badge to see criteria and dates, or view past achievements in a timeline.</li>
                         </ul>
                     </div>
 
@@ -136,11 +142,25 @@
                         <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-chart-line text-blue-400"></i> Personal Records (PRs)
                         </h4>
-                        <p class="text-gray-300 mb-4">Track your top exercises and monitor strength growth over time. PRs are recorded for sets of 8 reps or more.</p>
+                        <p class="text-gray-300 mb-4">Track your top exercises and monitor strength growth over time. <em>Note: Sets must be 8 reps or more to be recorded.</em></p>
                         <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
-                            <li><strong>Recent PRs:</strong> Displays your 5 most recent achievements.</li>
-                            <li><strong>PR Detail Page:</strong> Interactive progress charts tracking improvements.</li>
+                            <li><strong>Recent PRs:</strong> Displays your 5 most recent achievements with empty states if you have fewer than 5.</li>
+                            <li><strong>Search & Filter:</strong> Filter your PRs by muscle group and search by exercise name.</li>
+                            <li><strong>PR Detail Page:</strong> Interactive progress charts tracking improvements over time.</li>
                             <li><strong>Push Further:</strong> Smart suggestions for recent workouts utilizing that specific exercise.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-colors">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-days text-emerald-400"></i> Workout Calendar & History
+                        </h4>
+                        <p class="text-gray-300 mb-4">See your fitness journey at a glance, tracking workout consistency, completed classes, and body scans.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                            <li><strong>Workout Calendar:</strong> Shows how often you've completed Tempo workouts each month.</li>
+                            <li><strong>Recent Workouts:</strong> View your most recently completed sessions directly in the tab.</li>
+                            <li><strong>History Tracking:</strong> Easily access completed training plans, programs, and body scan history.</li>
+                            <li><strong>Customization:</strong> Filter your progress timeline using the built-in Date Range Picker.</li>
                         </ul>
                     </div>
                 </div>
@@ -233,7 +253,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <!-- Feature Cards -->
                     <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
                         <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-camera text-blue-400"></i> Advanced Rep Counting</h5>
                         <p class="text-sm text-gray-400">Uses depth sensors and AI to accurately track compound movements (squats, lunges, etc.), eliminating the need for manual counting.</p>
@@ -247,6 +266,11 @@
                     <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
                         <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-ruler-vertical text-yellow-400"></i> Range of Motion (ROM)</h5>
                         <p class="text-sm text-gray-400">Pace meter technology that tracks time under tension and ensures you hit full depth on exercises like squats and deadlifts.</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-scale-balanced text-teal-400"></i> Weight Recommendations</h5>
+                        <p class="text-sm text-gray-400">Customizes your training by dynamically suggesting weights aligned with your fitness level, calibrated from your baseline classes to ensure progressive overload.</p>
                     </div>
 
                     <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
@@ -324,7 +348,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Body Scan -->
                     <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
                         <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-person-rays text-cyan-400"></i> Body Composition Scan
@@ -337,7 +360,6 @@
                         </ul>
                     </div>
 
-                    <!-- Readiness -->
                     <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
                         <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-battery-three-quarters text-green-400"></i> Readiness Score
@@ -349,7 +371,6 @@
                         </ul>
                     </div>
 
-                    <!-- Community -->
                     <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
                         <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-user-group text-blue-400"></i> Community Challenges
@@ -361,7 +382,6 @@
                         </ul>
                     </div>
 
-                    <!-- Referrals & Integrations -->
                     <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
                         <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-share-nodes text-orange-400"></i> Referrals & Integrations
@@ -432,6 +452,102 @@
                             <p class="text-sm text-gray-400 mt-1">Reduce setup friction. Access workout preferences before class starts to define your dumbbell type (Standard, Extended, 3rd Party) and adjust separate Coach vs. Music volume sliders.</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- RETENTION PLAYBOOK TAB -->
+            <section id="retention-playbook" class="tab-content">
+                <div class="mb-8 border-b border-gray-800 pb-4">
+                    <h2 class="text-3xl font-bold text-white mb-2">Retention Playbook</h2>
+                    <p class="text-gray-400 text-lg">Actionable strategies to prevent membership cancellations by mapping customer objections directly to Tempo's unique features.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Time & Motivation -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-blue-400"></i> Time & Motivation
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "I Don't Have Enough Time"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Pitch the <strong>Phone Only Workout</strong> and <strong>Text Search</strong>. Show them they don't need to boot up the TV. They can search for "5 min core" or "10 min HIIT", prop up their phone, and get a highly effective workout in the time it takes to make coffee.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Difficult to Stay Motivated"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Introduce the <strong>Progress Hub</strong>. Walk them through the Trophy Case and explain how earning <strong>Badges</strong>, hitting <strong>PRs</strong>, and joining <strong>Community Challenges</strong> with friends provides the gamification needed to build a lasting habit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial & Value -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-wallet text-emerald-400"></i> Cost, Value & Competitors
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Cannot Afford it / Job Loss"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Explain <strong>6-Profile Sharing</strong>—they can split the membership cost with up to 5 family members or roommates. Additionally, pitch the <strong>Referral Program</strong>: if they invite friends using their 30-day guest pass, they can earn free months of membership.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Gym / Personal Trainer Preferred"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Emphasize <strong>Cloud Trainer Guidance</strong>, <strong>Reps in Reserve (RIR)</strong>, and <strong>Body Composition Scans</strong>. Explain that Tempo acts exactly like a 1:1 Personal Trainer, dynamically adjusting weights and measuring body fat %, features that cost hundreds of dollars extra at a standard gym.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content, Workout Style & Outdoor -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-purple-400"></i> Content & Workout Preferences
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Using Weights Only / In-Person"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Pitch <strong>Adaptable Training Plans</strong>. Let them know they don't have to follow traditional cardio-heavy video classes. They can focus entirely on heavy lifting, hitting strict strength sets, and achieving PRs structured by AI based on their daily Readiness.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Classes Limitations / Outdoor Workouts"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> For class limitations, guide them to <strong>Join Multiple Programs</strong> and the <strong>Live Classes</strong> carousel. If they prefer the outdoors, show them the <strong>Strava & Apple Health Integration</strong> so their runs and hikes automatically sync and contribute to their Readiness Score and Tempo goals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Life Events & Health -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney-user text-pink-400"></i> Life Changes, Medical & Interruptions
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Newborn / Life Circumstances"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Relieve the pressure by highlighting <strong>Partial Credit</strong>: if the baby wakes up and they only finish 50% of the class, they still get completion credit! Also mention <strong>Auto-Pause for Training Plans</strong>, ensuring they don't lose progress if they miss a chaotic week.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Injury / Medical / Pregnancy"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Guide them to the <strong>Recovery, Mobility, and Yoga</strong> categories. Emphasize <strong>Dynamic Rest</strong> (which pauses the workout if their heart rate is too high) and <strong>BYOD</strong> (so they can use lighter, 3rd-party weights or purely bodyweight while they recover safely).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware & Space -->
+                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-box-open text-orange-400"></i> Hardware, Space & Usability
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Not Enough Space / Relocating"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> If they are renovating or have their Tempo in storage, pitch the <strong>Phone Only Workout</strong> paired with <strong>BYOD</strong>. They can use any dumbbells they have lying around in a tiny corner of an apartment without needing the TV dock or physical Core unit.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
+                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Rep Counting / Software Issues"</h5>
+                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Educate them on proper <strong>Camera Calibration</strong>. Explain that enabling <strong>Mirror Mode</strong> keeps their camera view on-screen so they can instantly self-correct their positioning. Show them <strong>Pre-Class Settings</strong> to pre-select their dumbbell type and avoid mid-workout tracking frustration.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
