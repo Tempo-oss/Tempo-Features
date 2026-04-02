@@ -16,9 +16,9 @@
             display: block; 
         }
         .nav-item.active { 
-            background-color: #1F2937; /* gray-800 */
-            color: #3B82F6; /* blue-500 */
-            border-left: 4px solid #3B82F6; 
+            background-color: #F3F4F6; /* gray-100 */
+            color: #2563EB; /* blue-600 */
+            border-left: 4px solid #2563EB; 
         }
         .nav-item { 
             border-left: 4px solid transparent; 
@@ -34,78 +34,78 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #111827; 
+            background: #F9FAFB; /* gray-50 */
         }
         ::-webkit-scrollbar-thumb {
-            background: #374151; 
+            background: #D1D5DB; /* gray-300 */
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #4B5563; 
+            background: #9CA3AF; /* gray-400 */
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 font-sans antialiased flex flex-col md:flex-row h-screen overflow-hidden">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col md:flex-row h-screen overflow-hidden">
 
     <!-- Mobile Header -->
-    <header class="md:hidden bg-gray-800 p-4 flex justify-between items-center shadow-md z-20">
-        <div class="text-xl font-bold text-white flex items-center gap-2">
-            <i class="fa-solid fa-dumbbell text-blue-500"></i> Tempo Explorer
+    <header class="md:hidden bg-white border-b border-gray-200 p-4 flex justify-between items-center shadow-sm z-20">
+        <div class="text-xl font-bold text-gray-900 flex items-center gap-2">
+            <i class="fa-solid fa-dumbbell text-blue-600"></i> Tempo Explorer
         </div>
-        <button id="mobileMenuBtn" class="text-gray-300 hover:text-white focus:outline-none">
+        <button id="mobileMenuBtn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
             <i class="fa-solid fa-bars text-2xl"></i>
         </button>
     </header>
 
     <!-- Sidebar Navigation -->
-    <nav id="sidebar" class="bg-gray-900 border-r border-gray-800 w-full md:w-72 flex-shrink-0 flex flex-col h-full absolute md:relative z-10 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
+    <nav id="sidebar" class="bg-white border-r border-gray-200 w-full md:w-72 flex-shrink-0 flex flex-col h-full absolute md:relative z-10 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
         <div class="p-6 hidden md:block">
-            <h1 class="text-2xl font-bold text-white flex items-center gap-3">
-                <i class="fa-solid fa-dumbbell text-blue-500"></i>
+            <h1 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
+                <i class="fa-solid fa-dumbbell text-blue-600"></i>
                 Tempo
             </h1>
-            <p class="text-sm text-gray-400 mt-1">Features Documentation</p>
+            <p class="text-sm text-gray-500 mt-1">Features Documentation</p>
         </div>
 
         <div class="flex-1 overflow-y-auto py-4">
             <ul class="space-y-1">
                 <li>
-                    <button onclick="switchTab('progress-hub')" class="nav-item active w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('progress-hub')" class="nav-item active w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-trophy w-5 text-center"></i> Progress Hub
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('classes-home')" class="nav-item w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('classes-home')" class="nav-item w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-house w-5 text-center"></i> Classes & Home
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('programs')" class="nav-item w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('programs')" class="nav-item w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-calendar-check w-5 text-center"></i> Training Programs
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('smart-features')" class="nav-item w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('smart-features')" class="nav-item w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-microchip w-5 text-center"></i> Smart Features
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('phone-byod')" class="nav-item w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('phone-byod')" class="nav-item w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-mobile-screen-button w-5 text-center"></i> Phone Only & BYOD
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('health-community')" class="nav-item w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('health-community')" class="nav-item w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-heart-pulse w-5 text-center"></i> Health & Community
                     </button>
                 </li>
                 <li>
-                    <button onclick="switchTab('general-settings')" class="nav-item w-full text-left px-6 py-3 text-gray-300 hover:bg-gray-800 hover:text-white flex items-center gap-3 font-medium">
+                    <button onclick="switchTab('general-settings')" class="nav-item w-full text-left px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-gear w-5 text-center"></i> General & Settings
                     </button>
                 </li>
-                <li class="mt-4 border-t border-gray-800 pt-2">
-                    <button onclick="switchTab('retention-playbook')" class="nav-item w-full text-left px-6 py-3 text-red-400 hover:bg-gray-800 hover:text-red-300 flex items-center gap-3 font-medium">
+                <li class="mt-4 border-t border-gray-100 pt-2">
+                    <button onclick="switchTab('retention-playbook')" class="nav-item w-full text-left px-6 py-3 text-red-600 hover:bg-red-50 hover:text-red-700 flex items-center gap-3 font-medium">
                         <i class="fa-solid fa-life-ring w-5 text-center"></i> Retention Playbook
                     </button>
                 </li>
@@ -114,23 +114,23 @@
     </nav>
 
     <!-- Main Content Area -->
-    <main class="flex-1 overflow-y-auto bg-gray-950 p-6 md:p-10 relative">
+    <main class="flex-1 overflow-y-auto bg-gray-50 p-6 md:p-10 relative">
         <div class="max-w-5xl mx-auto">
             
             <!-- PROGRESS HUB TAB -->
             <section id="progress-hub" class="tab-content active">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Progress Hub</h2>
-                    <p class="text-gray-400 text-lg">A dynamic, motivating tool designed to fuel your fitness journey and serve as a personal cheerleader.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Progress Hub</h2>
+                    <p class="text-gray-600 text-lg">A dynamic, motivating tool designed to fuel your fitness journey and serve as a personal cheerleader.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-colors">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
                             <i class="fa-solid fa-medal text-yellow-500"></i> Achievements (Trophy Case)
                         </h4>
-                        <p class="text-gray-300 mb-4">Engage and stay motivated with physical badges earned for completing challenges, plans, and streaks.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                        <p class="text-gray-600 mb-4 text-sm">Engage and stay motivated with physical badges earned for completing challenges, plans, and streaks.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-2">
                             <li><strong>Categories:</strong> Organized by Attendance, Challenges, and Performance.</li>
                             <li><strong>Celebrations:</strong> Animated post-workout UI, multiple badge intros, and replayable animations on tap.</li>
                             <li><strong>Badge States:</strong> Empty (grayed out), Inactive (semi-filled), and Active (full color + glow).</li>
@@ -138,12 +138,12 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-colors">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-chart-line text-blue-400"></i> Personal Records (PRs)
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-blue-500"></i> Personal Records (PRs)
                         </h4>
-                        <p class="text-gray-300 mb-4">Track your top exercises and monitor strength growth over time. <em>Note: Sets must be 8 reps or more to be recorded.</em></p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                        <p class="text-gray-600 mb-4 text-sm">Track your top exercises and monitor strength growth over time. <em>Note: Sets must be 8 reps or more to be recorded.</em></p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-2">
                             <li><strong>Recent PRs:</strong> Displays your 5 most recent achievements with empty states if you have fewer than 5.</li>
                             <li><strong>Search & Filter:</strong> Filter your PRs by muscle group and search by exercise name.</li>
                             <li><strong>PR Detail Page:</strong> Interactive progress charts tracking improvements over time.</li>
@@ -151,12 +151,12 @@
                         </ul>
                     </div>
 
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 hover:border-gray-600 transition-colors">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-calendar-days text-emerald-400"></i> Workout Calendar & History
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-days text-emerald-500"></i> Workout Calendar & History
                         </h4>
-                        <p class="text-gray-300 mb-4">See your fitness journey at a glance, tracking workout consistency, completed classes, and body scans.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                        <p class="text-gray-600 mb-4 text-sm">See your fitness journey at a glance, tracking workout consistency, completed classes, and body scans.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-2">
                             <li><strong>Workout Calendar:</strong> Shows how often you've completed Tempo workouts each month.</li>
                             <li><strong>Recent Workouts:</strong> View your most recently completed sessions directly in the tab.</li>
                             <li><strong>History Tracking:</strong> Easily access completed training plans, programs, and body scan history.</li>
@@ -168,44 +168,44 @@
 
             <!-- CLASSES & HOME TAB -->
             <section id="classes-home" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Classes & Home Tab</h2>
-                    <p class="text-gray-400 text-lg">Your personalized hub for exploring new content, joining live sessions, and jumping into your next activity.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Classes & Home Tab</h2>
+                    <p class="text-gray-600 text-lg">Your personalized hub for exploring new content, joining live sessions, and jumping into your next activity.</p>
                 </div>
 
                 <div class="space-y-6">
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-magnifying-glass text-indigo-400"></i> Browse & Search
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-indigo-500"></i> Browse & Search
                         </h4>
-                        <p class="text-gray-300 mb-4">Find exactly what you need with robust filtering. Search by activity (Strength, Core, Recovery, Yoga, HIIT, etc.) or duration (e.g., 10-minute quick sessions).</p>
+                        <p class="text-gray-600 mb-4">Find exactly what you need with robust filtering. Search by activity (Strength, Core, Recovery, Yoga, HIIT, etc.) or duration (e.g., 10-minute quick sessions).</p>
                         <div class="flex gap-2 flex-wrap mt-2">
-                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-gray-300">Strength</span>
-                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-gray-300">Core</span>
-                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-gray-300">Recovery</span>
-                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-gray-300">HIIT</span>
-                            <span class="px-3 py-1 bg-gray-700 rounded-full text-xs text-gray-300">Yoga</span>
+                            <span class="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-xs text-gray-700 font-medium">Strength</span>
+                            <span class="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-xs text-gray-700 font-medium">Core</span>
+                            <span class="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-xs text-gray-700 font-medium">Recovery</span>
+                            <span class="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-xs text-gray-700 font-medium">HIIT</span>
+                            <span class="px-3 py-1 bg-gray-100 border border-gray-200 rounded-full text-xs text-gray-700 font-medium">Yoga</span>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                            <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
                                 <i class="fa-solid fa-satellite-dish text-red-500"></i> Live Classes
                             </h4>
-                            <p class="text-sm text-gray-400">Integrated natively into the Classes tab via a dedicated carousel. Features include:</p>
-                            <ul class="list-disc list-inside text-sm text-gray-400 space-y-1 mt-2">
+                            <p class="text-sm text-gray-600">Integrated natively into the Classes tab via a dedicated carousel. Features include:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-500 space-y-1 mt-2">
                                 <li>Join late and jump right into the live action.</li>
                                 <li>Set reminders (10 min notifications).</li>
                                 <li>Live countdowns starting 30 mins prior.</li>
                             </ul>
                         </div>
 
-                        <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                            <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <i class="fa-solid fa-layer-group text-green-400"></i> Home Tab Layout
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group text-green-500"></i> Home Tab Layout
                             </h4>
-                            <p class="text-sm text-gray-400">Features a dynamic "Top Black Section" that highlights your very next scheduled activity based on active subscriptions, training plans, or daily readiness state.</p>
+                            <p class="text-sm text-gray-600">Features a dynamic "Top Black Section" that highlights your very next scheduled activity based on active subscriptions, training plans, or daily readiness state.</p>
                         </div>
                     </div>
                 </div>
@@ -213,30 +213,30 @@
 
             <!-- PROGRAMS TAB -->
             <section id="programs" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Training Programs</h2>
-                    <p class="text-gray-400 text-lg">Adaptable, structured plans that evolve with your progress and daily readiness.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Training Programs</h2>
+                    <p class="text-gray-600 text-lg">Adaptable, structured plans that evolve with your progress and daily readiness.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-sliders text-purple-400"></i> Adaptable Training Plans
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-sliders text-purple-500"></i> Adaptable Training Plans
                         </h4>
-                        <p class="text-gray-300 mb-3 text-sm">Programs tailored to your body’s needs, focusing on measurable strength gains rather than just completing workouts.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                        <p class="text-gray-600 mb-3 text-sm">Programs tailored to your body’s needs, focusing on measurable strength gains rather than just completing workouts.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
                             <li><strong>Body Readiness:</strong> Workouts adjust based on sleep quality, HRV, and muscle recovery.</li>
                             <li><strong>Auto-Pause:</strong> If you are inactive for a week, your plan auto-pauses so you never fall behind.</li>
                             <li><strong>AMRAP Tracking:</strong> Uses "As Many Reps As Possible" tests for weight loss and endurance plans.</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-list-check text-emerald-400"></i> Program Management
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-emerald-500"></i> Program Management
                         </h4>
-                        <p class="text-gray-300 mb-3 text-sm">Total control over how you engage with structured content.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                        <p class="text-gray-600 mb-3 text-sm">Total control over how you engage with structured content.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
                             <li><strong>Join Multiple:</strong> Enroll in multiple programs simultaneously without pausing your current active program.</li>
                             <li><strong>Visual Progress:</strong> Dynamic progress bars (e.g., 3/20 workouts completed) on Program Cards.</li>
                             <li><strong>Upcoming Previews:</strong> View and set notifications for programs starting within 30 days.</li>
@@ -247,91 +247,91 @@
 
             <!-- SMART FEATURES TAB -->
             <section id="smart-features" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Smart Features</h2>
-                    <p class="text-gray-400 text-lg">AI-powered tracking, guidance, and feedback integrated directly into your workout experience.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Smart Features</h2>
+                    <p class="text-gray-600 text-lg">AI-powered tracking, guidance, and feedback integrated directly into your workout experience.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-camera text-blue-400"></i> Advanced Rep Counting</h5>
-                        <p class="text-sm text-gray-400">Uses depth sensors and AI to accurately track compound movements (squats, lunges, etc.), eliminating the need for manual counting.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-camera text-blue-500"></i> Advanced Rep Counting</h5>
+                        <p class="text-sm text-gray-600">Uses depth sensors and AI to accurately track compound movements (squats, lunges, etc.), eliminating the need for manual counting.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-person-walking text-green-400"></i> Form Feedback</h5>
-                        <p class="text-sm text-gray-400">Compares your movements against ideal form to provide visual cues, correct mistakes, and prevent injury.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-person-walking text-green-500"></i> Form Feedback</h5>
+                        <p class="text-sm text-gray-600">Compares your movements against ideal form to provide visual cues, correct mistakes, and prevent injury.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-ruler-vertical text-yellow-400"></i> Range of Motion (ROM)</h5>
-                        <p class="text-sm text-gray-400">Pace meter technology that tracks time under tension and ensures you hit full depth on exercises like squats and deadlifts.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-ruler-vertical text-yellow-500"></i> Range of Motion (ROM)</h5>
+                        <p class="text-sm text-gray-600">Pace meter technology that tracks time under tension and ensures you hit full depth on exercises like squats and deadlifts.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-scale-balanced text-teal-400"></i> Weight Recommendations</h5>
-                        <p class="text-sm text-gray-400">Customizes your training by dynamically suggesting weights aligned with your fitness level, calibrated from your baseline classes to ensure progressive overload.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-scale-balanced text-teal-500"></i> Weight Recommendations</h5>
+                        <p class="text-sm text-gray-600">Customizes your training by dynamically suggesting weights aligned with your fitness level, calibrated from your baseline classes to ensure progressive overload.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-weight-hanging text-indigo-400"></i> Weight Auto-ID</h5>
-                        <p class="text-sm text-gray-400">Automatically recognizes standard and extended weight plates based on color as soon as you complete 1 rep.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-weight-hanging text-indigo-500"></i> Weight Auto-ID</h5>
+                        <p class="text-sm text-gray-600">Automatically recognizes standard and extended weight plates based on color as soon as you complete 1 rep.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-battery-half text-red-400"></i> Dynamic Rest</h5>
-                        <p class="text-sm text-gray-400">Intelligently pauses your workout during rest periods if your heart rate remains too high, ensuring optimal recovery.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-battery-half text-red-500"></i> Dynamic Rest</h5>
+                        <p class="text-sm text-gray-600">Intelligently pauses your workout during rest periods if your heart rate remains too high, ensuring optimal recovery.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-comment-dots text-pink-400"></i> Reps in Reserve (RIR)</h5>
-                        <p class="text-sm text-gray-400">Prompts you to evaluate a set's difficulty by entering remaining potential reps, refining future weight recommendations.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-comment-dots text-pink-500"></i> Reps in Reserve (RIR)</h5>
+                        <p class="text-sm text-gray-600">Prompts you to evaluate a set's difficulty by entering remaining potential reps, refining future weight recommendations.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-cloud text-cyan-400"></i> Cloud Trainer Guidance</h5>
-                        <p class="text-sm text-gray-400">Real-time personalized coaching, weight adjustments, and encouragement delivered instantly based on live performance data.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-cloud text-cyan-500"></i> Cloud Trainer Guidance</h5>
+                        <p class="text-sm text-gray-600">Real-time personalized coaching, weight adjustments, and encouragement delivered instantly based on live performance data.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-video text-gray-400"></i> Mirror Mode</h5>
-                        <p class="text-sm text-gray-400">A persistent front-facing camera toggle that stays on screen to help you check your positioning and form continuously.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-video text-gray-500"></i> Mirror Mode</h5>
+                        <p class="text-sm text-gray-600">A persistent front-facing camera toggle that stays on screen to help you check your positioning and form continuously.</p>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-                        <h5 class="font-bold text-white flex items-center gap-2 mb-2"><i class="fa-solid fa-volume-high text-orange-400"></i> Audio Cues</h5>
-                        <p class="text-sm text-gray-400">Helpful sound alerts 3 seconds before a set begins and 3 seconds before it ends, keeping your focus completely on form.</p>
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-gray-900 flex items-center gap-2 mb-2"><i class="fa-solid fa-volume-high text-orange-500"></i> Audio Cues</h5>
+                        <p class="text-sm text-gray-600">Helpful sound alerts 3 seconds before a set begins and 3 seconds before it ends, keeping your focus completely on form.</p>
                     </div>
                 </div>
             </section>
 
             <!-- PHONE ONLY & BYOD TAB -->
             <section id="phone-byod" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Phone Only Workout & BYOD</h2>
-                    <p class="text-gray-400 text-lg">Take your fitness anywhere, using any equipment you have on hand.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Phone Only Workout & BYOD</h2>
+                    <p class="text-gray-600 text-lg">Take your fitness anywhere, using any equipment you have on hand.</p>
                 </div>
 
-                <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 mb-6">
-                    <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-mobile-screen text-blue-400"></i> Phone Only Workout
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200 mb-6">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-mobile-screen text-blue-500"></i> Phone Only Workout
                     </h4>
-                    <p class="text-gray-300 mb-4">Access the full workout library directly from your device, no secondary screens required. Perfect for travel or quick sessions.</p>
-                    <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                    <p class="text-gray-600 mb-4">Access the full workout library directly from your device, no secondary screens required. Perfect for travel or quick sessions.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-2">
                         <li><strong>Camera Calibration:</strong> Simple red/green box interface ensures you are perfectly positioned before starting.</li>
                         <li><strong>Streamlined UI:</strong> Leaderboards and previous rep counts are hidden to maximize screen real estate for the instructor and your form.</li>
                         <li><strong>Flexible Tracking:</strong> Opt to work out without camera tracking if preferred (though it impacts data accuracy for adaptive plans).</li>
                     </ul>
                 </div>
 
-                <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                    <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-dumbbell text-gray-400"></i> Bring Your Own Dumbbells (BYOD)
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                    <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-dumbbell text-gray-500"></i> Bring Your Own Dumbbells (BYOD)
                     </h4>
-                    <p class="text-gray-300 mb-4">You don't need proprietary weights to access world-class features. Customize your equipment loadout in the Pre-Class Settings.</p>
-                    <div class="bg-gray-900 rounded-lg p-4 mt-2">
-                        <h5 class="font-semibold text-white mb-2">Supported Equipment Types:</h5>
-                        <ul class="space-y-2 text-sm text-gray-400">
+                    <p class="text-gray-600 mb-4">You don't need proprietary weights to access world-class features. Customize your equipment loadout in the Pre-Class Settings.</p>
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200 mt-2">
+                        <h5 class="font-semibold text-gray-900 mb-2">Supported Equipment Types:</h5>
+                        <ul class="space-y-2 text-sm text-gray-600">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> <strong>Standard (7.5 lb):</strong> Default intelligent weights.</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> <strong>Extended (10 lb):</strong> Heavier intelligent weights (rounded down in app for increment consistency).</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> <strong>3rd Party Dumbbells:</strong> Use your own hex/adjustable weights. (Disables auto weight recognition).</li>
@@ -342,52 +342,52 @@
 
             <!-- HEALTH & COMMUNITY TAB -->
             <section id="health-community" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Health & Community</h2>
-                    <p class="text-gray-400 text-lg">Track profound body changes, understand your readiness, and workout with friends.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Health & Community</h2>
+                    <p class="text-gray-600 text-lg">Track profound body changes, understand your readiness, and workout with friends.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-person-rays text-cyan-400"></i> Body Composition Scan
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-person-rays text-cyan-500"></i> Body Composition Scan
                         </h4>
-                        <p class="text-gray-300 mb-3 text-sm">A 3D reconstruction utilizing device depth sensors to accurately measure your physique.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                        <p class="text-gray-600 mb-3 text-sm">A 3D reconstruction utilizing device depth sensors to accurately measure your physique.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
                             <li>Measures Body Fat %, Lean Mass, Body Circumference, and Waist-to-Hip ratio.</li>
                             <li>Delivers near-DXA scan accuracy right from your home.</li>
                             <li>Takes only 5-10 minutes to process into a full 3D color avatar.</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-battery-three-quarters text-green-400"></i> Readiness Score
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-battery-three-quarters text-green-500"></i> Readiness Score
                         </h4>
-                        <p class="text-gray-300 mb-3 text-sm">A 1-100 metric determining your physiological preparation for physical activity today.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                        <p class="text-gray-600 mb-3 text-sm">A 1-100 metric determining your physiological preparation for physical activity today.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
                             <li><strong>Inputs:</strong> Sleep Quality, HRV, Resting Heart Rate, and localized Muscle Recovery.</li>
                             <li><strong>States:</strong> Primed (80-100), Ready (60-80), Fatigued (40-60), Recovering (0-40).</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-user-group text-blue-400"></i> Community Challenges
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-user-group text-blue-500"></i> Community Challenges
                         </h4>
-                        <p class="text-gray-300 mb-3 text-sm">Create target or competition-based challenges for calories, volume lifted, or active minutes.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                        <p class="text-gray-600 mb-3 text-sm">Create target or competition-based challenges for calories, volume lifted, or active minutes.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
                             <li>Shareable challenge links and IDs.</li>
                             <li>Dynamic leaderboards filterable by friends or overall community.</li>
                         </ul>
                     </div>
 
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-share-nodes text-orange-400"></i> Referrals & Integrations
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-share-nodes text-orange-500"></i> Referrals & Integrations
                         </h4>
-                        <p class="text-gray-300 mb-3 text-sm">Grow your squad and sync your data everywhere.</p>
-                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                        <p class="text-gray-600 mb-3 text-sm">Grow your squad and sync your data everywhere.</p>
+                        <ul class="list-disc list-inside text-sm text-gray-500 space-y-1">
                             <li><strong>Referrals:</strong> Generate a 30-day free trial code for friends. Earn a free month when they convert.</li>
                             <li><strong>Strava & Apple HealthKit:</strong> Automatically sync completed workouts, HR data, and calories.</li>
                         </ul>
@@ -397,59 +397,59 @@
 
             <!-- GENERAL & SETTINGS TAB -->
             <section id="general-settings" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">General Features & Settings</h2>
-                    <p class="text-gray-400 text-lg">System-wide tools, accessibility settings, and customization.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">General Features & Settings</h2>
+                    <p class="text-gray-600 text-lg">System-wide tools, accessibility settings, and customization.</p>
                 </div>
 
                 <div class="space-y-4">
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-4 items-start md:items-center">
-                        <div class="bg-gray-700 p-3 rounded-lg text-white">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
                             <i class="fa-solid fa-font fa-fw text-xl"></i>
                         </div>
                         <div>
-                            <h5 class="font-bold text-white text-lg">Text Search</h5>
-                            <p class="text-sm text-gray-400 mt-1">Available across Classes, PRs, and Training Plans. Features close-match logic to handle typos and requires a minimum of 3 characters for fast, relevant results.</p>
+                            <h5 class="font-bold text-gray-900 text-lg">Text Search</h5>
+                            <p class="text-sm text-gray-600 mt-1">Available across Classes, PRs, and Training Plans. Features close-match logic to handle typos and requires a minimum of 3 characters for fast, relevant results.</p>
                         </div>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-4 items-start md:items-center">
-                        <div class="bg-gray-700 p-3 rounded-lg text-white">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
                             <i class="fa-solid fa-chart-pie fa-fw text-xl"></i>
                         </div>
                         <div>
-                            <h5 class="font-bold text-white text-lg">Partial Credit</h5>
-                            <p class="text-sm text-gray-400 mt-1">Workouts completed 50% or more now grant full completion credit. Partial metrics like calories and strength sets are dynamically awarded as you progress through the class.</p>
+                            <h5 class="font-bold text-gray-900 text-lg">Partial Credit</h5>
+                            <p class="text-sm text-gray-600 mt-1">Workouts completed 50% or more now grant full completion credit. Partial metrics like calories and strength sets are dynamically awarded as you progress through the class.</p>
                         </div>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-4 items-start md:items-center">
-                        <div class="bg-gray-700 p-3 rounded-lg text-white">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
                             <i class="fa-solid fa-headphones fa-fw text-xl"></i>
                         </div>
                         <div>
-                            <h5 class="font-bold text-white text-lg">Bluetooth Headphones</h5>
-                            <p class="text-sm text-gray-400 mt-1">Connect your favorite Bluetooth headphones directly via the audio tray during a class or from pre-class settings for an immersive experience.</p>
+                            <h5 class="font-bold text-gray-900 text-lg">Bluetooth Headphones</h5>
+                            <p class="text-sm text-gray-600 mt-1">Connect your favorite Bluetooth headphones directly via the audio tray during a class or from pre-class settings for an immersive experience.</p>
                         </div>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-4 items-start md:items-center">
-                        <div class="bg-gray-700 p-3 rounded-lg text-white">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
                             <i class="fa-solid fa-closed-captioning fa-fw text-xl"></i>
                         </div>
                         <div>
-                            <h5 class="font-bold text-white text-lg">Closed Captioning (CC)</h5>
-                            <p class="text-sm text-gray-400 mt-1">Improve accessibility and instruction comprehension. Toggled via workout preferences, CC sits bottom-center by default but dynamically repositions to avoid UI collision.</p>
+                            <h5 class="font-bold text-gray-900 text-lg">Closed Captioning (CC)</h5>
+                            <p class="text-sm text-gray-600 mt-1">Improve accessibility and instruction comprehension. Toggled via workout preferences, CC sits bottom-center by default but dynamically repositions to avoid UI collision.</p>
                         </div>
                     </div>
 
-                    <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 flex flex-col md:flex-row gap-4 items-start md:items-center">
-                        <div class="bg-gray-700 p-3 rounded-lg text-white">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col md:flex-row gap-4 items-start md:items-center">
+                        <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
                             <i class="fa-solid fa-sliders fa-fw text-xl"></i>
                         </div>
                         <div>
-                            <h5 class="font-bold text-white text-lg">Pre-Class Settings & Volume Controls</h5>
-                            <p class="text-sm text-gray-400 mt-1">Reduce setup friction. Access workout preferences before class starts to define your dumbbell type (Standard, Extended, 3rd Party) and adjust separate Coach vs. Music volume sliders.</p>
+                            <h5 class="font-bold text-gray-900 text-lg">Pre-Class Settings & Volume Controls</h5>
+                            <p class="text-sm text-gray-600 mt-1">Reduce setup friction. Access workout preferences before class starts to define your dumbbell type (Standard, Extended, 3rd Party) and adjust separate Coach vs. Music volume sliders.</p>
                         </div>
                     </div>
                 </div>
@@ -457,93 +457,93 @@
 
             <!-- RETENTION PLAYBOOK TAB -->
             <section id="retention-playbook" class="tab-content">
-                <div class="mb-8 border-b border-gray-800 pb-4">
-                    <h2 class="text-3xl font-bold text-white mb-2">Retention Playbook</h2>
-                    <p class="text-gray-400 text-lg">Actionable strategies to prevent membership cancellations by mapping customer objections directly to Tempo's unique features.</p>
+                <div class="mb-8 border-b border-gray-200 pb-4">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Retention Playbook</h2>
+                    <p class="text-gray-600 text-lg">Actionable strategies to prevent membership cancellations by mapping customer objections directly to every single one of Tempo's unique features.</p>
                 </div>
 
                 <div class="space-y-6">
-                    <!-- Time & Motivation -->
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-clock text-blue-400"></i> Time & Motivation
+                    <!-- 1. Time, Schedule & Motivation -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-blue-600"></i> Time, Schedule & Motivation
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "I Don't Have Enough Time"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Pitch the <strong>Phone Only Workout</strong> and <strong>Text Search</strong>. Show them they don't need to boot up the TV. They can search for "5 min core" or "10 min HIIT", prop up their phone, and get a highly effective workout in the time it takes to make coffee.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "I Don't Have Enough Time" / "Customer Dont have time"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Phone Only Workout, Text Search, Home Tab, Scheduled Workouts.</strong><br>Show them they don't need to boot up the TV. They can use <strong>Text Search</strong> for "5 min core", prop up their phone, and work out. The <strong>Home Tab</strong> automatically queues their "Next Activity", and they can use <strong>Scheduled Workouts</strong> to eliminate decision fatigue entirely.</p>
                             </div>
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Difficult to Stay Motivated"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Introduce the <strong>Progress Hub</strong>. Walk them through the Trophy Case and explain how earning <strong>Badges</strong>, hitting <strong>PRs</strong>, and joining <strong>Community Challenges</strong> with friends provides the gamification needed to build a lasting habit.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Difficult to Stay Motivated"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Progress Hub (Trophy Case), Personal Records (PRs), Community Challenges.</strong><br>Walk them through the <strong>Progress Hub</strong>. Explain how earning physical and digital <strong>Badges</strong>, hitting <strong>PRs</strong>, checking their <strong>Workout Calendar</strong>, and joining <strong>Community Challenges</strong> with leaderboards provides the gamification needed to build a lasting habit.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Financial & Value -->
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-wallet text-emerald-400"></i> Cost, Value & Competitors
+                    <!-- 2. Cost, Value & Competitors -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-wallet text-emerald-600"></i> Cost, Value & Competitors
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Cannot Afford it / Job Loss"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Explain <strong>6-Profile Sharing</strong>—they can split the membership cost with up to 5 family members or roommates. Additionally, pitch the <strong>Referral Program</strong>: if they invite friends using their 30-day guest pass, they can earn free months of membership.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Cannot Afford it / Downgrade / Job Loss"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: 6-Profile Sharing, Referrals, BYOD.</strong><br>Explain <strong>6-Profile Sharing</strong>—they can split the membership cost with family members. Pitch the <strong>Referral Program</strong> to earn free months of membership. Finally, mention <strong>BYOD (Bring Your Own Dumbbells)</strong>, which allows them to progress without the pressure of buying expensive Tempo weights.</p>
                             </div>
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Gym / Personal Trainer Preferred"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Emphasize <strong>Cloud Trainer Guidance</strong>, <strong>Reps in Reserve (RIR)</strong>, and <strong>Body Composition Scans</strong>. Explain that Tempo acts exactly like a 1:1 Personal Trainer, dynamically adjusting weights and measuring body fat %, features that cost hundreds of dollars extra at a standard gym.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Gym / Personal Trainer / Competitor Preferred"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Cloud Trainer Guidance, Body Composition Scans, Reps in Reserve (RIR), Set Effectiveness, Weight Recommendations, Range of Motion (ROM).</strong><br>Explain that Tempo acts exactly like a 1:1 Personal Trainer. <strong>Cloud Trainer</strong> and <strong>Set Effectiveness</strong> dynamically adjust weights (a feature competitors lack), and <strong>Body Scans</strong> alone cost $150+ at a clinic but are included free with Tempo.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content, Workout Style & Outdoor -->
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-layer-group text-purple-400"></i> Content & Workout Preferences
+                    <!-- 3. Content, Hardware & Workout Styles -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-purple-600"></i> Content, Hardware & Workout Styles
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Using Weights Only / In-Person"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Pitch <strong>Adaptable Training Plans</strong>. Let them know they don't have to follow traditional cardio-heavy video classes. They can focus entirely on heavy lifting, hitting strict strength sets, and achieving PRs structured by AI based on their daily Readiness.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Using Weights Only / In-Person Training"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Adaptable Training Plans, Weight Auto-ID, Advanced Rep Counting, AMRAP Tracking.</strong><br>Let them know they don't have to follow traditional follow-along classes. With <strong>Adaptable Training Plans</strong> and <strong>AMRAP</strong> tests, they can focus entirely on heavy lifting while Tempo's <strong>Auto-ID</strong> and <strong>Rep Counting</strong> handle the math automatically.</p>
                             </div>
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Classes Limitations / Outdoor Workouts"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> For class limitations, guide them to <strong>Join Multiple Programs</strong> and the <strong>Live Classes</strong> carousel. If they prefer the outdoors, show them the <strong>Strava & Apple Health Integration</strong> so their runs and hikes automatically sync and contribute to their Readiness Score and Tempo goals.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Classes Limitations / Outdoor Workouts"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Live Classes Carousel, Join Multiple Programs, Strava Integration, Apple HealthKit.</strong><br>Point them to the <strong>Live Classes</strong> for fresh daily content and show them they can <strong>Join Multiple Programs</strong> to mix up their routine. If they prefer the outdoors, show them that <strong>Strava</strong> and <strong>Apple Health</strong> automatically sync their runs to their Tempo goals.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Life Events & Health -->
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-house-chimney-user text-pink-400"></i> Life Changes, Medical & Interruptions
+                    <!-- 4. Life Events, Health & Accessibility -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney-user text-pink-600"></i> Life Events, Health & Accessibility
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Newborn / Life Circumstances"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Relieve the pressure by highlighting <strong>Partial Credit</strong>: if the baby wakes up and they only finish 50% of the class, they still get completion credit! Also mention <strong>Auto-Pause for Training Plans</strong>, ensuring they don't lose progress if they miss a chaotic week.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Newborn / My Life Circumstances Have Changed"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Partial Credit, Auto-Pause for Training Plans.</strong><br>Relieve the pressure with <strong>Partial Credit</strong>: if the baby wakes up and they only finish 50% of the class, they still get completion credit! Also mention <strong>Auto-Pause</strong>, ensuring they don't lose plan progress during a chaotic week.</p>
                             </div>
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Injury / Medical / Pregnancy"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Guide them to the <strong>Recovery, Mobility, and Yoga</strong> categories. Emphasize <strong>Dynamic Rest</strong> (which pauses the workout if their heart rate is too high) and <strong>BYOD</strong> (so they can use lighter, 3rd-party weights or purely bodyweight while they recover safely).</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Injury / Medical Reason / Pregnancy"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Readiness Score, Dynamic Rest, Recovery/Mobility Categories.</strong><br>Show how the <strong>Readiness Score</strong> adapts daily to their lower energy levels. Emphasize <strong>Dynamic Rest</strong> (pausing if HR gets too high for safety), and guide them to our dedicated Recovery and Yoga classes.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Hardware & Space -->
-                    <div class="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                            <i class="fa-solid fa-box-open text-orange-400"></i> Hardware, Space & Usability
+                    <!-- 5. Space & Software Issues -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-box-open text-orange-600"></i> Space & Software Troubleshooting
                         </h4>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Not Enough Space / Relocating"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> If they are renovating or have their Tempo in storage, pitch the <strong>Phone Only Workout</strong> paired with <strong>BYOD</strong>. They can use any dumbbells they have lying around in a tiny corner of an apartment without needing the TV dock or physical Core unit.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Not Enough Space / Tempo In Storage / Relocating"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Phone Only Workout, BYOD.</strong><br>If they are renovating or have their Tempo in storage, pitch the <strong>Phone Only Workout</strong> paired with <strong>BYOD</strong>. They can use any dumbbells they have lying around in a tiny corner of an apartment without needing the TV dock or physical Core unit.</p>
                             </div>
-                            <div class="bg-gray-900 p-4 rounded-lg border border-gray-700/50">
-                                <h5 class="text-red-400 font-semibold mb-1">Reason: "Rep Counting / Software Issues"</h5>
-                                <p class="text-sm text-gray-400"><strong>How to Save:</strong> Educate them on proper <strong>Camera Calibration</strong>. Explain that enabling <strong>Mirror Mode</strong> keeps their camera view on-screen so they can instantly self-correct their positioning. Show them <strong>Pre-Class Settings</strong> to pre-select their dumbbell type and avoid mid-workout tracking frustration.</p>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <h5 class="text-red-600 font-semibold mb-1">Reason: "Software / Rep Counting / App Support / Unresponsive"</h5>
+                                <p class="text-sm text-gray-700"><strong>Features to Pitch: Camera Calibration, Mirror Mode, Pre-Class Settings, Closed Captioning (CC), Audio Cues, Bluetooth Headphones.</strong><br>Educate them on proper <strong>Camera Calibration</strong> and enable <strong>Mirror Mode</strong> so they can self-correct their positioning for better AI tracking. For usability issues, show them how to adjust volume in <strong>Pre-Class Settings</strong>, connect <strong>Bluetooth Headphones</strong>, and turn on <strong>CC</strong> or <strong>Audio Cues</strong> to make the app work perfectly for their setup.</p>
                             </div>
                         </div>
                     </div>
